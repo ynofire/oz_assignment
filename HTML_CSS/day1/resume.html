@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+<body>
+    <h1>Self Introduction.</h1>
+  <hr>
+
+  <img src="./me.gif" alt="프로필 사진" width="100">
+  <p>나는 하얀원숭이입니다.</p>
+  <p><a href="https://github.com/ynofire/oz_assignment">내 Repository 바로가기</a></p>
+
+  <ul>
+    <li>이름: 하얀원숭이</li>
+    <li>나이: 13살</li>
+    <li>출생년도: 몰?루</li>
+    <li>성별: 남자</li>
+    <li>거주지: 부산</li>
+  </ul>
+
+  <h1>Hobby & Preference</h1>
+  <hr>
+
+  <!-- type="i"로 소문자 로마 숫자 목록 표시 -->
+  <ol type="i">
+    <li>취미: 독서</li>
+    <li>좋아하는 음식: 회</li>
+    <li>좋아하는 영화: For whom the bell tolls</li>
+    <li>좋아하는 책: 갈매기의 꿈</li>
+    <li>좋아하는 노래 장르: 뉴에이지</li>
+  </ol>
+
+  <h1>Career & Work Experience</h1>
+  <hr>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>회사명</th>
+        <th>직무</th>
+        <th>기간</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>무직</td>
+        <td>백수</td>
+        <td>2009~2014</td>
+      </tr>
+      <tr>
+        <td>Fire Dance Club</td>
+        <td>매댄</td>
+        <td>2014~2026</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>Send Cover Letter</h1>
+  <hr>
+
+  <form action="https://httpbin.org/post" method="post">
+    <label for="email">담당자 이메일:</label>
+    <input type="email" id="email" name="email" placeholder="email@example.com">
+
+    <label for="company">회사명:</label>
+    <input type="text" id="company" name="company" placeholder="(주)니가가라 하와이">
+
+    <input type="submit" value="이력서 전송하기">
+  </form>
+</body>
+</html>

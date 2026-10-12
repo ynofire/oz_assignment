@@ -1,0 +1,27 @@
+# HTML TAG review
+
+- **기본적으로 대부분의 태그는 닫는 태그</>와 쌍으로 작성해야한다
+- <p> : 문단 태그
+- <br> : 줄바꿈 태그(닫을 필요 없음)
+- <hr> : 가로줄
+- <a href=""> : anchor heyer reference
+- <img src="" width="" alt="">
+    - src : link
+    - width : 가로폭(세로폭은 맞춰서 자동 조절)
+    - alt : 소스가 없을 시 대체 문자열
+- list : 여러 데이터 출력, <li></li>로 순서 조절
+    - ul : 순서대로 출력
+    - ol : 앞쪽에 숫자, 알파벳 등의 기호로 순서대로 출력
+- <table> : 장표!
+    - <table border="1"> : 테이블 외곽선
+    - <thead> : 제일 윗 줄
+        - <tr> : table row(가로 한 줄)
+        - <th> : 제일 윗줄에 들어갈 내용들
+    - <tbody> : 테이블 바디
+        - <td> : 테이블 내용에 들어갈 내용들
+- <form action=""> : 어디에서 무엇을 할 것인지
+    - <input type="" name=""> : 타이핑 박스 + 무엇을 할 것인지에 대한 query
+    - <button> : 누를 수 있는 버튼(엔터 역할)
+    - <form action="" method="post"> : 데이터를 create할 수 있는 방법
+- id= : 식별자, 중복 X
+- class= : 여러 태그 중복 O
