@@ -1,0 +1,324 @@
+/* 1. Reset & Global Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Segoe UI", Roboto, sans-serif;
+  background-color: #f6f7f9;
+  color: #333333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2. Whole Layout Wrapper */
+.layout-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* 3. Left Fixed Sidebar */
+.sidebar {
+  width: 190px;
+  background-color: #2b2b2b;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 48px 24px;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14.5px;
+  letter-spacing: -0.3px;
+  transition: color 0.15s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #0284c7; /* 이미지 3의 마우스 호버/활성화 하늘색 */
+}
+
+/* 4. Main Content Area */
+.main-wrapper {
+  margin-left: 190px;
+  flex: 1;
+  padding: 40px 32px 80px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* White Resume Card */
+.resume-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 820px;
+  padding: 44px 52px;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* 5. Header / Profile Area */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+.contact-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #4b5563;
+}
+
+.contact-item svg {
+  flex-shrink: 0;
+  display: block;
+}
+
+.contact-item a {
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.profile-photo {
+  flex-shrink: 0;
+  margin-left: 24px;
+}
+
+.profile-photo img {
+  border-radius: 50%;
+  display: block;
+}
+
+/* Top Horizontal Line */
+.header-divider {
+  border: none;
+  height: 2px;
+  background-color: #4b5563;
+  margin: 0 0 28px 0;
+}
+
+/* 6. Section Titles */
+.section-title {
+  border-left: 4.5px solid #18181b;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+  margin: 36px 0 16px 0;
+  line-height: 1.25;
+}
+
+/* 7. Introduce Section */
+.introduce-desc {
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: #374151;
+  word-break: keep-all;
+}
+
+/* 8. Skills Section */
+.skill-group {
+  margin-top: 14px;
+}
+
+.skill-category {
+  font-size: 11px;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 8px;
+}
+
+.skill-badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-badge {
+  background-color: #eef2f6;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 16px;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+/* 9. Experience Section */
+.experience-item {
+  margin-top: 20px;
+}
+
+.experience-item:not(:first-child) {
+  border-top: 1px solid #eef2f6;
+  padding-top: 24px;
+}
+
+.company-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.company-name {
+  font-size: 17px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.company-period {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.role-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.role-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.role-badge {
+  font-size: 11px;
+  color: #6b7280;
+  border: 1px solid #d1d5db;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.project-block {
+  border-left: 2px solid #e5e7eb;
+  padding-left: 12px;
+  margin: 12px 0 16px 0;
+}
+
+.project-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.project-period {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.project-details {
+  padding-left: 16px;
+  margin: 0;
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.project-details li {
+  margin-bottom: 2px;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid #eef2f6;
+  margin: 28px 0;
+}
+
+/* 10. Information Grid Sections (Education, Awards, Certifications) */
+.info-item {
+  display: flex;
+  align-items: baseline;
+  padding: 6px 0;
+  font-size: 13.5px;
+}
+
+.info-period {
+  width: 140px;
+  flex-shrink: 0;
+  color: #6b7280;
+}
+
+.info-desc {
+  color: #1f2937;
+  font-weight: 700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .layout-wrapper {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    position: static;
+    padding: 20px;
+  }
+  .sidebar nav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  .main-wrapper {
+    margin-left: 0;
+    padding: 20px 12px;
+  }
+  .resume-card {
+    padding: 28px 20px;
+  }
+}
