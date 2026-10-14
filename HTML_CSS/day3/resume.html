@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+
+    <!-- [External CSS] 메인 스타일 시트 연결 -->
+    <link rel="stylesheet" href="./resume_style.css">
+
+    <style>
+      /* [Internal CSS] 브라우저 인쇄 모드 및 PDF 저장 전용 스타일 오버라이드 */
+      @media print {
+        body {
+          background-color: #ffffff;
+        }
+        .sidebar {
+          display: none !important;
+        }
+        .main-wrapper {
+          margin-left: 0 !important;
+          padding: 0 !important;
+        }
+        .resume-card {
+          box-shadow: none !important;
+          border-radius: 0 !important;
+          max-width: 100% !important;
+          padding: 0 !important;
+        }
+      }
+    </style>
+</head>
+<body>
+    <div class="layout-wrapper">
+        <!-- 좌측 사이드바 내비게이션 -->
+        <aside class="sidebar">
+            <nav>
+                <!-- 
+                  [Inline CSS]
+                  현재 활성화된 메뉴 항목의 강조 색상 지정
+                -->
+                <a href="#resume" class="nav-link active" style="color: #0284c7;">이력서</a>
+                <!-- <a href="#" class="nav-link">포트폴리오</a> -->
+                <a href="javascript:window.print();" class="nav-link">PDF 내려받기</a>
+            </nav>
+        </aside>
+
+        <!-- 우측 메인 이력서 영역 -->
+        <main class="main-wrapper">
+            <article class="resume-card" id="resume">
+                <!-- 프로필 상단 헤더 -->
+                <header class="profile-header">
+                    <div class="profile-info">
+                        <h1 class="profile-name">구 민 준 Minjun Koo</h1>
+                        <div class="contact-meta">
+                            <!-- 전화번호 -->
+                            <div class="contact-item">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                </svg>
+                                <span>010-4783-5369</span>
+                            </div>
+
+                            <!-- 이메일 -->
+                            <div class="contact-item">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="4"></circle>
+                                    <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+                                </svg>
+                                <a href="mailto:justlikeu@gmail.com">JUSTLIKEU@GMAIL.COM</a>
+                            </div>
+
+                            <!-- 깃허브 -->
+                            <div class="contact-item">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                                </svg>
+                                <a href="https://github.com/ynofire/" target="_blank">Github</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 
+                      [Inline CSS]
+                      - 프로필 이미지의 종횡비와 크기를 정확하게 보장
+                    -->
+                    <div class="profile-photo">
+                        <img src="./me.gif" alt="프로필 사진" style="width: 86px; height: 86px; object-fit: cover;">
+                    </div>
+                </header>
+
+                <hr class="header-divider">
+
+                <!-- 1. Introduce -->
+                <section>
+                    <h2 class="section-title">Introduce</h2>
+                    <p class="introduce-desc">
+                        <b>전략적 브랜드 개발, 디지털 전환(Digital Transformation), 무역 분야에서 9년 이상의 경력을 보유한 성과 지향적 마케팅 전문가.<br></b>
+                        최근 모바일이앤엠애드(Mobile E&M Ad) E-비즈 사업부 시니어 프로페셔널(Senior Professional)로 재직하며 데이터 기반 시장 분석 및 성과 최적화를 전담했습니다.<br>
+                        언어학을 전공한 한국어·영어 바이링구얼로서 AI 기반 커뮤니케이션과 사용자 경험(UX)에 차별화된 인사이트를 제공할 수 있으며, 지금은 기업의 AX 전환을 위한 컨설턴트로 발돋움 중입니다.<br>
+                        
+                    </p>
+                </section>
+
+                <!-- 2. Core Competencies 섹션 -->
+                <section>
+                    <h2 class="section-title">Core Competencies</h2>
+
+                    <div class="skill-group">
+                        <div class="skill-category">LANGUAGE</div>
+                        <div class="skill-badge-list">
+                            <span class="skill-badge">Python</span>
+                            <span class="skill-badge">SQL</span>
+                            <span class="skill-badge">English</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-category">FRAMEWORK</div>
+                        <div class="skill-badge-list">
+                            <span class="skill-badge">FastAPI</span>
+                            <span class="skill-badge">ClaudeCode</span>
+                            <span class="skill-badge">Hermes</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-category">DATABASE</div>
+                        <div class="skill-badge-list">
+                            <span class="skill-badge">PostgreSQL</span>
+                            <span class="skill-badge">Supabase</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-category">INFRA</div>
+                        <div class="skill-badge-list">
+                            <span class="skill-badge">Vercel</span>
+                            <span class="skill-badge">Docker</span>
+                            <span class="skill-badge">GitHub Actions</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-category">Marketing</div>
+                        <div class="skill-badge-list">
+                            <span class="skill-badge">Strategy</span>
+                            <span class="skill-badge">E-Biz</span>
+                            <span class="skill-badge">Operation</span>
+                            <span class="skill-badge">Communication</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. Experience 섹션 -->
+                <section>
+                    <h2 class="section-title">Experience</h2>
+
+                    <!-- 모바일이앤엠애드 -->
+                    <div class="experience-item">
+                        <div class="company-title-row">
+                            <span class="company-name">모바일이앤엠애드 Mobile E&M Ad</span>
+                            <span class="company-period">2025 ~ 2026</span>
+                        </div>
+                        <div class="role-row">
+                            <span class="role-title">E-비즈 사업부</span>
+                            <span class="role-badge">시니어 프로페셔널</span>
+                        </div>
+
+                        <!-- 프로젝트 -->
+                        <div class="project-block">
+                            <ul class="project-details">
+                                <li>플랫폼 성장 및 유저 인게이지먼트 촉진을 위한 디지털 마케팅 전략 주도</li>
+                                <li>데이터 분석을 활용해 시장 변화를 모니터링하고 수익성 극대화를 위한 E-비즈니스 모델 조정</li>
+                                <li>유관 부서와의 협업을 통해 디지털 인사이트를 마케팅 워크플로우에 통합</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 삼원약품 -->
+                    <div class="experience-item">
+                        <div class="company-title-row">
+                            <span class="company-name">삼원약품 Samwon Pharma</span>
+                            <span class="company-period">2018 ~ 2025</span>
+                        </div>
+                        <div class="role-row">
+                            <span class="role-title">마케팅 및 재고관리</span>
+                            <span class="role-badge">차장</span>
+                        </div>
+
+                        <!-- 프로젝트 -->
+                        <div class="project-block">
+                            <ul class="project-details">
+                                <li>시장 점유율 확대를 이끈 고효율 마케팅 캠페인 총괄</li>
+                                <li>재고 관리 시스템을 혁신하여 최적의 재고 수준을 유지함과 동시에 상당한 비용 절감 달성</li>
+                                <li>복잡한 시장 데이터를 분석하여 경영진 의사결정을 위한 실질적 실행 보고서로 도출</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 대선주조 -->
+                    <div class="experience-item">
+                        <div class="company-title-row">
+                            <span class="company-name">대선주조 Daesunjujo</span>
+                            <span class="company-period">2014 ~ 2017</span>
+                        </div>
+                        <div class="role-row">
+                            <span class="role-title">마케팅 및 수출</span>
+                            <span class="role-badge">담당</span>
+                        </div>
+
+                        <!-- 프로젝트 -->
+                        <div class="project-block">
+                            <ul class="project-details">
+                                <li>사내 디지털 마케팅 기반을 최초로 구축하여 온라인 브랜드 인지도 제고 및 이커머스 추진의 전략적 기틀 마련</li>
+                                <li>타깃 프로모션 및 통합 마케팅 캠페인을 통해 국내 시장 내 브랜드 인지도 제고</li>
+                                <li>수출입 무역 업무를 총괄 관리하여 규정 준수율 100% 및 적기 납품 보장</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- 4. Education 섹션 -->
+                <section>
+                    <h2 class="section-title">Education</h2>
+                    <div class="info-item">
+                        <div class="info-period">2007 ~ 2012</div>
+                        <div class="info-desc">부산대학교 (언어정보학 전공)</div>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </div>
+</body>
+</html>
